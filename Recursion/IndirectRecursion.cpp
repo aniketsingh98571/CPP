@@ -1,30 +1,29 @@
 #include <stdio.h>
 #include<iostream>
 using namespace std;
-void funB (int n);
-void funA (int n)
+void IndirectRecursionB (int number);
+void IndirectRecursionA (int number)
 {
-  if (n > 0)
+  if (number > 0)
     {
-      cout << n << " ";
-      funB (n - 1);
+      cout << number << " ";
+      funB (number - 1);
 
     }
 }
 
-void funB (int n)
+void IndirectRecursionB (int number)
 {
-  if (n > 1)
+  if (number > 1)
     {
-      cout << n << " ";
-      funA (n / 2);
+      cout << number << " ";
+      funA (number / 2);
     }
 }
 
-int
-main ()
+int main ()
 {
 
-  funA (20);
+  IndirectRecursionA (20);
   return 0;
 }

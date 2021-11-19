@@ -2,28 +2,28 @@
 #include<iostream>
 using namespace std;
 //using recursion
-int fun (int n)
+int Sum_Natural_Number (int number)
 {
-  if (n == 0)
+  if (number == 0)
     {
       return 0;
     }
   else
-    return funA (n - 1) + n;
+    return Sum_Natural_Number (number - 1) + n;
 }
 
 //using loop
-int fun (int n)
+int Sum_Natural_Number (int number)
 {
-  int i;
+  int iterate;
   int sum = 0;
-  if (n == 0)
+  if (number == 0)
     return 0;
   else
     {
-      for (i = 1; i <= n; i++)
+      for (iterate = 1; iterate <= number; iterate++)
 	{
-	  sum = sum + i;
+	  sum = sum + iterate;
 	}
       return sum;
     }

@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include<iostream>
 using namespace std;
-int funA(int n){
-    if(n>100){
-        return n-10;
+int NestedRecursion(int number){
+    if(number>100){
+        return number-10;
     }
     else
-    return funA(funA(n+11));
+    return NestedRecursion(NestedRecursion(number+11));
 }
 int main()
 {
-    cout<<funA(95);
+    cout<<NestedRecursion(95);
 
     return 0;
 }

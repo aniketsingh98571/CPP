@@ -1,23 +1,23 @@
 #include<iostream>
 using namespace std;
 //using recursion
-int fun(int n){
-    if(n==0) return 1;
-    else return fun(n-1)*n;
+int Factorial(int number){
+    if(number==0) return 1;
+    else return fun(number-1)*number;
 }
 
 //using loop
-int fun(int n){
-    int i=1;
-    while(n>0){
-        i=i*n;
-        n--;
+int Factorial(int number){
+    int Factorial_Product=1;
+    while(number>0){
+        Factorial_Product=Factorial_Product*number;
+        number--;
     }
-    return i;
+    return Factorial_Product;
 }
 int main ()
 {
-  cout << fun (0);
+  cout << Factorial (0);
 
   return 0;
 }

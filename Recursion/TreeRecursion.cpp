@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-void fun(int n)
+void TreeRecursion(int number)
 {
-    if (n > 0)
+    if (number > 0)
     {
-        cout << n << " ";
-        fun(n - 1);
-        fun(n - 1);
+        cout << number << " ";
+        TreeRecursion(number - 1);
+        TreeRecursion(number - 1);
     }
 }
 
 int main()
 {
 
-    fun(3);
+    TreeRecursion(3);
     return 0;
 }
