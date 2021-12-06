@@ -20,8 +20,30 @@ int fibonacci(int number){
    else return fibonacci(number-1)+fibonacci(number-2);
 }
 
+//optimize Code
+int FibonacciArray[10];
+int Fibonacci(int n){
+
+if(n<=1){
+    FibonacciArray[n]=n;
+    return n;
+}
+else{
+    if(FibonacciArray[n-2]==-1)
+        FibonacciArray[n-2]=Fibonacci(n-2);
+    if(FibonacciArray[n-1]==-1)
+        FibonacciArray[n-1]=Fibonacci(n-1);
+        
+    return FibonacciArray[n-1]+FibonacciArray[n-2];
+}
+
+
 int main()
 {
+    int i;
+    for(i=0;i<10;i++)
+    FibonacciArray[i]=-1;
+    cout<<Fibonacci(5);
 cout<<fibonacci(9);
     return 0;
 }
