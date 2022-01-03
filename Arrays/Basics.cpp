@@ -1,5 +1,20 @@
 #include<iostream>
 using namespace std;
+void ArraySizeAndLengthConcept(){
+    int size,length,i;
+   cout<<"Enter Size of Array ";
+   cin>>size;
+   cout<<"Enter length of Array";
+   cin>>length;
+   int A[size];
+   for(i=0;i<length;i++){
+       cin>>A[i];
+   }
+   for(i=0;i<length;i++){
+       cout<<A[i]<<"\t";
+   }
+
+}
 int main(){
     //various declaration of array
     //#1
