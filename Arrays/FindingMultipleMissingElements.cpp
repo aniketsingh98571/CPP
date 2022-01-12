@@ -14,6 +14,26 @@ void MultipleMissingElementSortedArray(int arr[],int length){
         }
     }
 }
+
+//For Unsorted Array using HashTable Concept.
+void MultipleMissingElements(int arr[],int length){
+    int max=arr[0],i;
+    for(i=0;i<length;i++){
+        if(arr[i]>max)
+            max=arr[i];
+    }
+    int *arr2=new int[max];
+    *arr2={0};
+    for(i=0;i<length;i++){
+        arr2[arr[i]]++;
+    }
+    for(i=0;i<max;i++){
+        if(i==0)
+            continue;
+        if(arr2[i]==0)
+            cout<<" Missing elements are "<<i<<endl;
+    }
+}
 int main()
 {
     
