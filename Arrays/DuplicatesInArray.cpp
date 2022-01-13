@@ -80,6 +80,21 @@ void FindingMissingElementsUnsortedArray(int arr[],int length){
         }
     }
 }
+
+//For Sorted Array
+void FindingPairs3(int arr[],int length,int sum){
+    int i=0,j=length-1;
+    while(i<j){
+        if(arr[i]+arr[j]==sum){  
+            cout<<" Pairs are "<<arr[i]<<" and "<<arr[j]<<endl;
+            i++;j++;
+        }
+        else if(arr[i]+arr[j]<sum)
+            i++;
+        else
+            j--;
+    }
+}
 int main()
 {
     
