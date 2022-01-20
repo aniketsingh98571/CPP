@@ -34,6 +34,20 @@ void FindingPairs2(int arr[],int length,int sum){
         arr2[arr[i]]++;
     }
 }
+//For Sorted Array
+void FindingPairs3(int arr[],int length,int sum){
+    int i=0,j=length-1;
+    while(i<j){
+        if(arr[i]+arr[j]==sum){  
+            cout<<" Pairs are "<<arr[i]<<" and "<<arr[j]<<endl;
+            i++;j++;
+        }
+        else if(arr[i]+arr[j]<sum)
+            i++;
+        else
+            j--;
+    }
+}
 int main() {
     int A[]={6,8,3,10,16,7,5,2,9,14};
     int length=10;
