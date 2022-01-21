@@ -31,13 +31,11 @@ void SwappingAlternate(int arr[],int length){
 }
 
 //Method-2
-void SwappingAlternate(int arr[],int length){
+void Unique(int arr[],int length){
     int i,temp;
     for(i=0;i<length;i+=2){
         if(i+1<length){
-            temp=arr[i];
-            arr[i]=arr[i+1];
-            arr[i+1]=temp;
+            swap(arr[i],arr[i+1]);
         }
             
     }
