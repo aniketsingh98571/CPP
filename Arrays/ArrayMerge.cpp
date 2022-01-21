@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include<iostream>
 using namespace std;
+//Merge two sorted arrays.
 
 //The resultant array should be sorted considering some false conditions.
 void ArrayMerge(int arr1[],int arr2[],int m,int n){
