@@ -10,12 +10,12 @@ void FindUnique(int arr[],int length){
             max=arr[i];
         
     }
-    int *arr2=new int[max];
+    int *arr2=new int[max+1];
     *arr2={0};
     for(i=0;i<length;i++){
         arr2[arr[i]]++;
     }
-    for(i=0;i<max;i++){
+    for(i=0;i<max+1;i++){
         if(arr2[i]==1)
             cout<<i<<" ";
     }

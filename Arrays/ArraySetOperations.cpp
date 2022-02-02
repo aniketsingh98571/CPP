@@ -28,6 +28,7 @@ int m;
 }
 
 //Works for Sorted array.
+//agar tera pehla element hi chota hai toh aage compare krke faayda nhi so i++/j++
 void Intersection(int arr1[],int arr2[],int len1,int len2){
     int i,j,k;
     i=j=k=0;

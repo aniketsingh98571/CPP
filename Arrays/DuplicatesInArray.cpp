@@ -31,12 +31,12 @@ void CountingDuplicates(int arr[],int length){
 void FindingDuplicatesUsingHashTable(int arr[],int length){
     int max,i;
     max=arr[length-1];
-    int *arr2=new int[max];
+    int *arr2=new int[max+1];
     *arr2={0};
     for(i=0;i<length;i++){
         arr2[arr[i]]++;
     }
-    for(i=0;i<max;i++){
+    for(i=0;i<max+1;i++){
         if(arr2[i]>1){
             cout<<"  element  "<<i<<" is repeated "<<arr2[i]<<" times"<<endl;
         }
@@ -61,6 +61,25 @@ void FindingMissingElementsUnsortedArray(int arr[],int length){
 }
 
 
+//Method 5
+// XOR operation- We will perform XOR operation on all elements of arr, so in this case the repeated elements XOR becomes zero
+// then again we will perform XOR operation from 1 to N-1, in this all the elements XOR'ed with first arr[] XOR becomes zero and the
+// one that is duplicated is XOR'ed with 0[previous XOR result]==That duplicated elements
+
+// arr[4,2,1,3,1]
+// XOR
+// 1 to 4
+// =4^2^1^3^1^1^2^3^4  [Same elements XOR becomes zero]
+// = 0^1
+// =1 [which is a duplicate element]
+void Duplicates1(int arr[],int length){
+    int i,ans=0;
+    for(i=0;i<length;i++)
+        ans=ans^arr[i];
+    for(i=1;i<length;i++)
+        ans=ans^i;
+    cout<<ans;
+}
 //For Unsorted Array, time Complexity-O(n) using HashTable Concept.
 void FindingMissingElementsUnsortedArray(int arr[],int length){
     int i,max;
@@ -69,12 +88,12 @@ void FindingMissingElementsUnsortedArray(int arr[],int length){
         if(arr[i]>max)
             max=arr[i];
     }
-    int *arr2=new int[max];
+    int *arr2=new int[max+1];
     *arr2={0};
     for(i=0;i<length;i++){
         arr2[arr[i]]++;
     }
-    for(i=0;i<=max;i++){
+    for(i=0;i<=max+1;i++){
         if(arr2[i]>1){
             cout<<"element "<<i<<" is repeated "<<arr2[i]<<" times "<<endl;
         }

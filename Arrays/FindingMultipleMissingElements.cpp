@@ -22,12 +22,12 @@ void MultipleMissingElements(int arr[],int length){
         if(arr[i]>max)
             max=arr[i];
     }
-    int *arr2=new int[max];
+    int *arr2=new int[max+1];
     *arr2={0};
     for(i=0;i<length;i++){
         arr2[arr[i]]++;
     }
-    for(i=0;i<max;i++){
+    for(i=0;i<max+1;i++){
         if(i==0)
             continue;
         if(arr2[i]==0)
