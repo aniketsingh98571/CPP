@@ -16,15 +16,15 @@ int main()
    int n;
    cin>>n;
    int cnt=1;
-   int i=1;
-   while(i<=n){
-      int j=1;
-       while(j<=i){
-           cout<<i<<"\t";
-           j++;
+   int row=1;
+   while(row<=n){
+      int column=1;
+       while(column<=row){
+           cout<<row<<"\t";
+           column++;
        }
        cout<<endl;
-       i++;
+       row++;
    }
     return 0;
 }

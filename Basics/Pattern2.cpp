@@ -11,13 +11,13 @@ int main()
 {
    int n;
    cin>>n;
-   int i=1;
-   while(i<=n){
-      int j=1;
-       while(j<=n){
-           cout<<i<<"\t";
-           j++;
+   int row=1;
+   while(row<=n){
+      int column=1;
+       while(column<=n){
+           cout<<row<<"\t";
+           column++;
        }
        cout<<endl;
-       i++;
+       row++;
    }

@@ -15,15 +15,15 @@ int main()
 {
    int n;
    cin>>n;
-   int i=1;
-   while(i<=n){
-      int j=1;
-       while(j<=n){
-           cout<<n-j+1<<"\t";
-           j++;
+   int row=1;
+   while(row<=n){
+      int column=1;
+       while(column<=n){
+           cout<<n-column+1<<"\t";
+           column++;
        }
        cout<<endl;
-       i++;
+       row++;
    }
     return 0;
 }
